@@ -1,18 +1,18 @@
 class List {
-  // your code here  
+  // your code here
   constructor(name) {
     this.name = name
     appData.lists.push(this)
   }
-  
+
   tasks() {
     return appData.tasks.filter(task => task.list.name === this.name)
   }
-  
+
   taskDescriptions() {
     return this.tasks().map(task => task.description)
   }
-  
+
   render() {
     let tasksText = ""
 
@@ -24,11 +24,11 @@ class List {
             X
         </button>
         <br>
-        Priority: low
+        Priority: ${taskObject.priority}
       </li>`
     })
-    
-    
+
+
     return(`
       <div id=${this.name}>
       <h2>${this.name}
@@ -40,6 +40,6 @@ class List {
         ${tasksText}
       </ul>
       </div>
-    `)  
-  }  
+    `)
+  }
 }

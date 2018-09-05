@@ -1,0 +1,4 @@
+let appData = {
+  lists: [],
+  tasks: []
+}
